@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings — Interactive RevealJS Deck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- RevealJS core & theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide with email -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <p>Prepared by: <href> 22f2000199@ds.study.iitm.ac.in</href></p>
+        <aside class="notes">Introduce yourself and highlight that this is an interactive deck.</aside>
+      </section>
+
+      <!-- Markdown slide -->
+      <section data-markdown>
+        <textarea data-template>
+          ## Key Highlights
+          - Revenue Growth: **15%**
+          - Net Profit: **$2.3M**
+          - Active Users: **+25%**
+
+          ---
+          ## Next Steps
+          - Expand to new regions
+          - Launch AI-driven analytics
+        </textarea>
+      </section>
+
+      <!-- Fragments -->
+      <section>
+        <h2>Quarterly Drivers</h2>
+        <ul>
+          <li class="fragment">Strong customer acquisition</li>
+          <li class="fragment">Increased retention</li>
+          <li class="fragment fade-up">Operational efficiency</li>
+        </ul>
+        <aside class="notes">Use fragments to reveal one driver at a time while speaking.</aside>
+      </section>
+
+      <!-- Code sample with highlighting -->
+      <section>
+        <h2>Data Analysis Code</h2>
+        <pre><code class="python" data-line-numbers="2,5">
+import pandas as pd
+
+# Load quarterly earnings data
+df = pd.read_csv("earnings.csv")
+print(df.describe())
+        </code></pre>
+      </section>
+
+      <!-- Math Equation -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>Net Profit Margin:</p>
+        \[
+          \text{NPM} = \frac{\text{Net Income}}{\text{Revenue}} \times 100
+        \]
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
+    });
+  </script>
+</body>
+</html>
